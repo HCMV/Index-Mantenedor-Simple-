@@ -2,7 +2,7 @@
  $_SESSION["pagina"]=0;
  ?>
 
-  <div style="background:white; padding: 55px; border-radius:7px;">
+  <div style="background:white; padding: 5px 5px 0px; border-radius:7px;">
   <h3 class="contents-heading">Tabla de Contenido</h3>
       <?php
       // valida si conexión es correcta, ejecuta la consulta sql
