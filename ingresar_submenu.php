@@ -34,7 +34,7 @@ $titulo = $_POST['titulo_submenu'];
   $sql = "INSERT INTO titulo_index VALUES (".$id_titulo.",'".$titulo."', ".$posicion_menu.", ".$posicion_submenu.")";
 print_r($sql);
   if ($conn->query($sql) === TRUE) {
-    //header("Location: http://mbprocedimientos.esy.es/?pid=3b511438d07dbd9baec409c21d4c4c80"); 
+    //header("Location: http://localhost/Index-Mantenedor-Simple--master/?pid=38e8574b105eb4f5ea7d2461773aaf93"); 
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
  }

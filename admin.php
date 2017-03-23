@@ -1,30 +1,30 @@
-  <div style="background:white; border-radius:7px;">
+<div style="background:white; border-radius:7px;">
  <?php
  $_SESSION["pagina"]=2;
 
-if (isset($_POST['accion'])){
-  $accion = $_POST['accion'];
-}else{
-   $accion = '';
-} 
-if (isset($_POST['mod'])){
-  $mod = $_POST['mod'];
-}else{
-   $mod = '';
-} 
-if (isset($_POST['sub'])){
-  $sub = $_POST['sub'];
-}else{
-   $sub = '';
-}
-if (isset($_POST['del'])){
-  $del = $_POST['del'];
-}else{
-   $del = '';
-}
+  if (isset($_POST['accion'])){
+    $accion = $_POST['accion'];
+  }else{
+    $accion = '';
+  } 
+  if (isset($_POST['mod'])){
+    $mod = $_POST['mod'];
+  }else{
+    $mod = '';
+  } 
+  if (isset($_POST['sub'])){
+    $sub = $_POST['sub'];
+  }else{
+    $sub = '';
+  }
+  if (isset($_POST['del'])){
+    $del = $_POST['del'];
+  }else{
+    $del = '';
+  }
 
 
-
+// accion modificar titulo, realizo consulta por id enviado por post
 if($accion == "MT"){
   $sql = "SELECT * FROM titulo_index where id_titulo = ".$mod."";
 
@@ -36,6 +36,9 @@ if($accion == "MT"){
         }
   }
 }
+//fin modificar titulo
+
+//accion modificar subtitulo
 if($accion == "MS"){
   $sql = "SELECT * FROM titulo_index inner join cuerpo_titulo on id_titulo = cuerpo_id_titulo where id_titulo = ".$mod."";
 
@@ -57,7 +60,9 @@ if($accion == "MS"){
         }
   }
 }
+// fin modificar subtitulo
 
+// accion delete
 if($accion == "D"){
 
   $sql = "DELETE FROM titulo_index where id_titulo = ".$del."";
@@ -70,13 +75,14 @@ if($accion == "D"){
     $conn->query($sql);
   }
 }
- ?>
- <div class="contents">
+
+echo '<div class="contents">';
 
       
-
+// accion agregar titulo
      
-<?php if($accion == "AT"){ 
+if($accion == "AT"){ 
+   // muestra formulario para ingresar nuevo titulo
    echo'
     <form name="form2" action="ingresar_nuevo.php"  role="form2" method="POST">
       <div class="row">
@@ -100,7 +106,11 @@ if($accion == "D"){
         </div>
       </div>
     </form>';
+    //fin formulario de ingreso de titulo
+
+
 }elseif($accion == "MS"){
+// muestra formulario para modificar subtitulo
 echo'
          <form name="form4" action="modificar_cuerpo.php" method="POST" role="form4">
           <div class="row">
@@ -163,7 +173,11 @@ echo'
             </div>
           </div>
       </form>';
+      //fin formulario para modificar subtitulo
+
+
   }elseif($accion == "MT"){ 
+    // muestra formulario para modificar titulo
    echo'
     <form name="form2" action="modificar_nuevo.php"  role="form2" method="POST">
       <div class="row">
@@ -188,6 +202,7 @@ echo'
         </div>
       </div>
     </form>';
+    // fin formulario para modificar titulo
   }elseif($accion == "AS"){?>
          <form name="form4" action="ingresar_cuerpo.php" method="POST" role="form4">
           <div class="row">
@@ -320,11 +335,14 @@ echo'
                           $submenu = $row['posicion_submenu'];
                           if($submenu == 0){
                             $accion = "MT";
+                            $tabla = "FF9900";
                           }else{
                             $accion = "MS";
+                            $tabla = "FFAA11";
                           } 
+
                           echo '
-                                  <tr>
+                                  <tr style="background: #'.$tabla.';">
                                     <td>'.$row['nombre_titulo'].'</td>
 
                                     <td class="align-left">

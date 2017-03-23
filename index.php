@@ -1,6 +1,6 @@
 <?php
 session_start();
-$key = 'cu4n70_m4s_c0mpl3j0_m3j05';
+$key = '<!$f€w5s%F5Q@_(an7ahlpdgh';
 require 'js/conexion.js'; 
 $checkbox = '';
 ?>
@@ -10,79 +10,26 @@ $checkbox = '';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>MasterBase®</title>
+    <title>Index</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Formulario css -->
     <link href="css/form.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <link href="css/dropdowns-enhancement.css" rel="stylesheet">
-
-    <!-- Custom styles for this template 
-    <link href="css/grid.css" rel="stylesheet">-->
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type='text/javascript' src="js/dropdowns-enhancement.js"></script>  
-<script type="text/javascript">
-	$(document).ready(function()
-		{
-			$("#radio1").click(function () {
-					$("form[name=form3]").hide(1000);
-          $("form[name=form4]").hide(1000);
-          $("form[name=form2]").show(1000);
-           	});
- 
-			$("#radio2").click(function () {	 
-					$("form[name=form2]").hide(1000);
-          $("form[name=form4]").hide(1000);
-					$("form[name=form3]").show(1000);
-			});
-
-      $("#radio3").click(function () {   
-          $("form[name=form2]").hide(1000);
-          $("form[name=form3]").hide(1000);
-          $("form[name=form4]").show(1000);
-      });
-
-
-		
- 
-		 });
-</script>
-<SCRIPT LANGUAGE="JavaScript">
-
-function ClipBoard() 
-{
-holdtext.innerText = copytext.innerText;
-Copied = holdtext.createTextRange();
-Copied.execCommand("Copy");
-}
-
-</SCRIPT>
-
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- menú desplegable de mantenedor de subtitulo-->
+    <script type='text/javascript' src="js/dropdowns-enhancement.js"></script>
+    <link href="css/dropdowns-enhancement.css" rel="stylesheet">  
   </head>
 
   <body>
+    <!-- comienza contenedor -->
     <div class="container"  style="background: #FF9900; ">
 
       <div class="page-header"  style="background: FF9900;">
@@ -137,10 +84,6 @@ Copied.execCommand("Copy");
     ?>
 
      
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    </div> <!-- / fin container -->
   </body>
 </html>
